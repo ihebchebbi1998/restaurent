@@ -1,0 +1,56 @@
+<section class="breadcrumb breadcrumb_bg" style="margin-top:120px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner text-center">
+                    <div class="breadcrumb_iner_item">
+                        <h2>{{title}} Article</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div>
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-lg-6">
+                <div class="regervation_part_iner">
+                    <form [formGroup]="addArticleForm">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="title " formControlName='title' [(ngModel)]='article.title'>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="date" class="form-control" id="inputEmail4" placeholder="date " formControlName='date' [(ngModel)]='article.date'>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="category" formControlName='category' [(ngModel)]='article.category'>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="content" formControlName='content'[(ngModel)]='article.content'>
+                            </div>
+                            
+                           
+
+                        
+
+
+                        </div>
+
+
+                        <div class="regerv_btn">
+                            <button type="submit"  class="btn_4" (click)='addEditArticle()'>{{title}} Article</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,72 @@
+<section class="breadcrumb breadcrumb_bg" style="margin-top:120px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner text-center">
+                    <div class="breadcrumb_iner_item">
+                        <h2>Display  Article</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="blog_area section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <div class="blog_left_sidebar">
+                    <article class="blog_item">
+                        <div class="blog_item_img">
+                            <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="">
+                            <a href="#" class="blog_item_date">
+                                <h3>{{article?.date | date:'dd'}}</h3>
+                                <p>{{article.date | date:'MMM'}}</p>
+                            </a>
+                        </div>
+
+                        <div class="blog_details">
+                            <a class="d-inline-block" href="single-blog.html">
+                                <h2>{{article.title | uppercase}}</h2>
+                            </a>
+                            <p>{{article.content}}.</p>
+                            <ul class="blog-info-link">
+                                <li><a href="#"><i class="far fa-user"></i>{{article.category}}</a></li>
+                                <!-- <li><a href="#"><i class="far fa-comments"></i> 03 Comments</a></li> -->
+                            </ul>
+                        </div>
+                    </article>
+
+                 
+
+                  
+
+                  
+
+
+                    <nav class="blog-pagination justify-content-center d-flex">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a href="#" class="page-link" aria-label="Previous">
+                                    <i class="ti-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="page-link">1</a>
+                            </li>
+                            <li class="page-item active">
+                                <a href="#" class="page-link">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="page-link" aria-label="Next">
+                                    <i class="ti-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>

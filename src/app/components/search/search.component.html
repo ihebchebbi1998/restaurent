@@ -1,0 +1,91 @@
+<!-- breadcrumb start-->
+<section class="breadcrumb breadcrumb_bg" style="margin-top:120px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb_iner text-center">
+          <div class="breadcrumb_iner_item">
+            <h2>look for a chef </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="blog_area section_padding" style="background-color: antiquewhite;">
+  <div class="container">
+    <div class="row">
+      <h2 style="color: #ff6426;"> Please type the specialty of chef you'r looking for :</h2>
+      <div style="border: solid azure;padding: 20px;">
+
+        <div class="col-lg-4" style="margin-right: 300px; ">
+
+          <div class="blog_left_sidebar" style="width: 100%;margin-right: 200px;">
+
+            <div class="single_sidebar_widget search_widget " style="width : 260% ;">
+              <form [formGroup]="searchForm">
+                <div class="form-group">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder='Search by speciality'
+                      onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search by specialty'"
+                      formControlName='speciality'>
+                    <div class="input-group-append">
+                      <button class="btn" type="button"><i class="ti-search"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <button class="button rounded-0 primary-bg text-white w-100 btn_4" type="submit"
+                  (click)='searchBySpeciality()'>Search</button>
+              </form>
+            </div>
+
+            <section class="chefs_part blog_item_section section_padding" style="width: 320%;">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-5">
+                    <div class="section_tittle">
+                     
+                      <h2>{{title}}</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 col-lg-4" *ngFor="let chef of searchedChefs">
+                    <div class="single_blog_item">
+                      <div class="single_blog_img">
+                        <img src="assets/img/chefs/ds.jpg" alt="" width="206px" height="300px">
+                      </div>
+                      <div class="single_blog_text text-center">
+                        <h3>{{chef.name}}</h3>
+                        <p>{{chef.speciality}}</p>
+                        <p>{{chef.note}}</p>
+                        <div class="social_icon">
+                          <a href="#"> <i class="ti-facebook"></i> </a>
+                          <a href="#"> <i class="ti-twitter-alt"></i> </a>
+                          <a href="#"> <i class="ti-instagram"></i> </a>
+                          <a href="#"> <i class="ti-skype"></i> </a>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+
+
+
+                </div>
+              </div>
+            </section>
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

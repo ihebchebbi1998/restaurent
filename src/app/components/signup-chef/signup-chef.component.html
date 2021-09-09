@@ -1,0 +1,95 @@
+<section class="breadcrumb breadcrumb_bg" style="margin-top:120px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner text-center">
+                    <div class="breadcrumb_iner_item">
+                        <h2>Sign up Chef</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div>
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-lg-6">
+                <div class="regervation_part_iner">
+                    <form [formGroup]="signupChefForm">
+                        <div class="form-row"  >
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="first Name " formControlName='firstName'>
+                            </div>
+                            <div *ngIf="signupChefForm.controls['firstName'].invalid&& (signupChefForm.controls['firstName'].touched || signupChefForm.controls['firstName'].dirty)" style="display: inline-block;">
+                                <div *ngIf="signupChefForm.controls['firstName'].errors.required" style="color: red;"> this field is required </div>
+                                <div *ngIf="signupChefForm.controls['firstName'].errors.minlength" style="color: red;" > first name must have at least 5 caracters </div>
+
+
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control"  placeholder="last Name " formControlName='lastName'>
+                            </div>
+                            <div *ngIf="signupChefForm.controls['lastName'].invalid && (signupChefForm.controls['lastName'].touched || signupChefForm.controls['lastName'].dirty)"> 
+                                <div *ngIf="signupChefForm.controls['lastName'].errors.required" style="color: red;"> this field is required </div>
+                                <div *ngIf="signupChefForm.controls['lastName'].errors.minlength" style="color: red;"> last name must have at least 3 caracters </div>
+
+                                 </div>
+                            <div class="form-group col-md-12">
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email" formControlName='email'>
+                            </div>
+                            <div *ngIf="signupChefForm.controls['email'].invalid && (signupChefForm.controls['email'].touched || signupChefForm.controls['email'].dirty)">
+                                <div *ngIf="signupChefForm.controls['email'].errors.required" style="color: red;"> this field is required 
+                                    
+                                </div>
+                                <div *ngIf="signupChefForm.controls['email'].errors.email" style="color: red;"> Invalid email
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="password" class="form-control" id="inputEmail4" placeholder="Password" formControlName='pwd'>
+                            </div>
+                            <div *ngIf="signupChefForm.controls['pwd'].invalid &&(signupChefForm.controls['pwd'].touched || signupChefForm.controls['pwd'].dirty)">
+
+                               <div *ngIf="signupChefForm.controls['pwd'].errors.minlength && signupChefForm.controls['pwd'].errors.maxlength"> 
+                                    must at least have 15 car and 8 car
+                               </div> 
+                            </div>
+                            <div *ngIf="signupChefForm.controls['pwd'].invalid && (signupChefForm.controls['pwd'].dirty || signupChefForm.controls['pwd'].touched)">
+                                
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="password" class="form-control" id="inputEmail4" placeholder="confirm Password" formControlName='confirmPwd'>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="tel" class="form-control" id="inputEmail4" placeholder="phone number" formControlName='phone'>
+                            </div>
+                            <div *ngIf="signupChefForm.controls['phone'].invalid &&(signupChefForm.controls['phone'].touched || signupChefForm.controls['phone'].dirty)">
+
+                                <div *ngIf="signupChefForm.controls['phone'].errors.required" style="color: red;"> this field is required </div>
+                                <div *ngIf="signupChefForm.controls['phone'].errors.minlength" style="color: red;" > phone must have at least 8 caracters </div>
+                                <div *ngIf="signupChefForm.controls['phone'].errors.maxlength" style="color: red;" > phone must have at max 8 caracters </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="regerv_btn">
+                            <button type="submit"  class="btn_4" (click)='signUp()'>SignUp</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

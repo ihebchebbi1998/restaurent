@@ -1,0 +1,43 @@
+<table class="table table-dark table-striped">
+
+    <thead>
+      <tr>
+        <th scope="col">#Num</th>
+        <th scope="col">#ID</th>
+        
+        <!-- <th scope="col">image</th> -->
+        <th scope="col">name</th>
+        <th scope="col">speciality</th>
+        <th scope="col">note</th>
+        <th scope="col">rank</th>
+        <th scope="col">date</th>
+
+        <th scope="col">Actions</th>
+
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let chef of chefs;let i=index; " >
+
+        <th scope="row">{{i}}</th>
+        <th scope="row">{{chef._id}}</th>
+        <!-- <td><img src="{{chef.image}}" width="150px" height="150px"></td> -->
+        <td>{{chef.name}}</td>
+        <td>{{chef.speciality | titlecase}}</td>
+        <td>{{chef.note}}</td>
+        <td [ngStyle]="{'color':chefRank(chef.note)[0]}" >{{chefRank(chef.note)[1]}}</td>
+        <td>{{chef.entryDate | date:'dd-MM-yyyy' }}</td>
+        
+        <td><button type="button" class="btn btn-info" (click)="goToDisplay(chef._id)">display</button>
+          <button type="button" class="btn btn-warning"(click)="goToEdit(chef._id)">edit</button>
+          <button type="button" class="btn btn-danger" (click)='deleteChef(chef._id)'>delete</button></td>
+        
+     
+       
+      </tr>
+     
+    </tbody>
+
+</table>
+

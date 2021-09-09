@@ -1,0 +1,38 @@
+<table class="table table-dark table-striped">
+
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        
+       
+        <th scope="col">first name</th>
+        <th scope="col">last name</th>
+        <th scope="col">email</th>
+        <th scope="col">tel</th>
+        <th scope="col">Role</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users ;let i=index;" >
+        <th scope="row">{{user._id}}</th>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user?.phone}}</td>
+        <td>{{user?.role}}</td>
+     
+        <td><button type="button" class="btn btn-info" (click)="goToDisplay(user._id)">display</button>
+          <button type="button" class="btn btn-warning" (click)="goToEdit(user._id)">edit</button>
+          <button type="button" class="btn btn-danger" (click)="deleteUser(user._id)">delete</button>
+        
+        </td>
+        
+       
+       
+      </tr>
+     
+    </tbody>
+
+</table>
+

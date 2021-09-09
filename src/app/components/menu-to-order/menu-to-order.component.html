@@ -1,0 +1,36 @@
+<section class="exclusive_item_part blog_item_section" style="margin-top: 150px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    <p>Popular Dishes</p>
+                    <h2>Our Exclusive Items</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+           
+     
+            <div class="col-sm-6 col-lg-4" *ngFor="let m of menus" >
+                <div class="single_blog_item">
+                    <div class="single_blog_img">
+                        <img src="assets/img/food_item/food_item_3.png" alt="">
+                    </div>
+                    <div class="single_blog_text">
+                        <h3>{{m.name}}</h3>
+                
+                        <p [ngClass]="{
+                            redClass: priceColor(m.price) == 'red',
+                            orangeClass: priceColor(m.price) == 'orange',
+                            greenClass: priceColor(m.price) == 'green'
+                        }"> {{m.description}}</p>
+                        <p [ngStyle]="{'color':priceColor(m.price)}"> Price :{{m.price}}</p>
+                        <a  type="submit" (click)="goToReserve(m._id)" class="btn_3">reserve <img src="assets/img/icon/left_2.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+           
+          
+        </div>
+    </div>
+</section>

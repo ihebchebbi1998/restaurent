@@ -1,0 +1,44 @@
+<table class="table table-dark table-striped">
+
+    <thead>
+      <tr>
+        <th scope="col">#Num</th>
+        <th scope="col">#ID</th>
+        
+        <!-- <th scope="col">image</th> -->
+        <th scope="col">title</th>
+        <th scope="col">content</th>
+        <th scope="col">date</th>
+        <th scope="col">category</th>
+        <th scope="col">date</th>
+
+        <th scope="col">Actions</th>
+
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let article of articles;let i=index; " >
+
+        <th scope="row">{{i}}</th>
+        <th scope="row">{{article._id}}</th>
+        <!-- <td><img src="{{articles.image}}" width="150px" height="150px"></td> -->
+        <td>{{article.title}}</td>
+        <td>{{article.content}}</td>
+        <td>{{article.date | date:'dd-MM-yyyy'}}</td>
+
+      
+        <td>{{article.category}}</td>
+        
+        <td><button type="button" class="btn btn-info" (click)="goToDisplay(article._id)">display</button>
+          <button type="button" class="btn btn-warning"(click)="goToEdit(article._id)">edit</button>
+          <button type="button" class="btn btn-danger" (click)='deletearticles(article._id)'>delete</button></td>
+        
+     
+       
+      </tr>
+     
+    </tbody>
+
+</table>
+

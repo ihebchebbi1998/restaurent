@@ -1,0 +1,25 @@
+<div class="container" style="margin-top: 150px;">
+    <form #weatherForm='ngForm'(ngSubmit)='search()' >
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="input-group">
+                    <div class="form-outline">
+                        <input type="search" id="form1" class="form-control" [(ngModel)]='weather.city'
+                            [ngModelOptions]='{standalone:true}'>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary">search
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </form>
+    <h3>Temp low :</h3>
+    <h3>Temp High :</h3>
+    <h3>Humidity :</h3>
+    <h3>Pressure :</h3>
+</div>
